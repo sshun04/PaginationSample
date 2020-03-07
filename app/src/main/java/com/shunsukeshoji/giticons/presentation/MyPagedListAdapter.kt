@@ -14,10 +14,10 @@ class MyPagedListAdapter : PagedListAdapter<User, RecyclerView.ViewHolder>(DIffC
     companion object {
         private val DIffCallBack = object : DiffUtil.ItemCallback<User>() {
             override fun areItemsTheSame(oldItem: User, newItem: User): Boolean =
-                oldItem == newItem
+                oldItem.id == newItem.id
 
             override fun areContentsTheSame(oldItem: User, newItem: User): Boolean =
-                oldItem.id == newItem.id
+                oldItem == newItem
         }
     }
 

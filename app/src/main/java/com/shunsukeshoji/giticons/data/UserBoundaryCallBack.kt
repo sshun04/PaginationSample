@@ -19,10 +19,9 @@ class UserBoundaryCallBack(
     // keep the last requested page. When the request is successful, increment the page number.
     private var rowLastId: Int = since
 
-    private val _networkErrors = MutableLiveData<String>()
     // LiveData of network errors.
-    val networkErrors: LiveData<String>
-        get() = _networkErrors
+    private val _networkErrors = MutableLiveData<String>()
+    val networkErrors: LiveData<String> = _networkErrors
 
 
     override fun onZeroItemsLoaded() {

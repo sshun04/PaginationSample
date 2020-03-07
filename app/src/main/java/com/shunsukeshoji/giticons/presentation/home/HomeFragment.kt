@@ -24,9 +24,10 @@ class HomeFragment : Fragment() {
         )
     }
 
+    private val pagedListAdapter = MyPagedListAdapter()
+
     private lateinit var binding: FragmentHomeBinding
 
-    private val pagedListAdapter = MyPagedListAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -50,7 +51,4 @@ class HomeFragment : Fragment() {
             Toast.makeText(requireContext(), "\uD83D\uDE28 Wooops $it", Toast.LENGTH_LONG).show()
         })
     }
-
-
-
 }

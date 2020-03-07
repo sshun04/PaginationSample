@@ -13,5 +13,5 @@ interface UserDao {
     fun insert(posts: List<User>)
 
     @Query("SELECT * FROM users WHERE id  > (:since)  ORDER BY id ")
-    fun usersByIds(since: Int): DataSource.Factory<Int, User>
+    fun usersById(since: Int): DataSource.Factory<Int, User>
 }

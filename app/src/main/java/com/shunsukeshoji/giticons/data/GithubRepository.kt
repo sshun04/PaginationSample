@@ -11,7 +11,7 @@ class GithubRepository(
 ) {
 
     fun load(since: Int): UserRequestResult {
-        val dataSourceFactory = cache.usersByIds(since)
+        val dataSourceFactory = cache.usersById(since)
 
         val boundaryCallback = UserBoundaryCallBack(since,service, cache)
         val networkErrors = boundaryCallback.networkErrors

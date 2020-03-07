@@ -14,5 +14,5 @@ class GithubLocalCache(
         }
     }
 
-    fun usersByIds(since:Int) = userDao.usersByIds(since)
+    fun usersById(since:Int) = userDao.usersById(since)
 }
